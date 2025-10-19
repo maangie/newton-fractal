@@ -23,50 +23,60 @@
 このプロジェクトは uv を利用しています。
 まだインストールしていない場合は：
 
+```shell
 curl -LsSf https://astral.sh/uv/install.sh | sh
+```
 
 2. 依存関係のインストール
 
+```shell
 uv sync
+```
 
 もしくは個別に：
 
+```
 uv add numpy matplotlib numba
+```
 
 3. 実行
 
+```
 uv run python main.py
+```
 
 実行後、ウィンドウにカラフルなニュートン法フラクタルが表示されます。
 
 ⸻
 
-パラメータ設定（main.py 冒頭部分）
+パラメータ設定（`main.py` 冒頭部分）
 
+```python
 COEFFS = np.array([1.0, 0.0, 0.0, -1.0])  # z^3 - 1
 MAX_ITER = 40
 EPS = 1e-8
 XMIN, XMAX = -1.5, 1.5
 YMIN, YMAX = -1.5, 1.5
 RES = 900
+```
 
-変数	説明
-COEFFS	多項式の係数（高次から順）
-MAX_ITER	ニュートン法の最大反復回数
-EPS	収束判定のしきい値
-XMIN, XMAX, YMIN, YMAX	描画範囲
-RES	出力画像の解像度
-
+| 変数 | 説明 |
+|------|------|
+| COEFFS | 多項式の係数（高次から順） |
+| MAX_ITER | ニュートン法の最大反復回数 |
+| EPS | 収束判定のしきい値 |
+| XMIN, XMAX, YMIN, YMAX | 描画範囲 |
+| RES | 出力画像の解像度 |
 
 ⸻
 
 例：他の多項式で試す
 
-式	COEFFS 設定例
-z⁴ − 1	[1, 0, 0, 0, -1]
-z⁵ − z + 1	[1, 0, 0, 0, -1, 1]
-z³ − 2z + 2	[1, 0, -2, 2]
-
+| 式 | COEFFS 設定例 |
+|----|----------------|
+| z⁴ − 1 | `[1, 0, 0, 0, -1]` |
+| z⁵ − z + 1 | `[1, 0, 0, 0, -1, 1]` |
+| z³ − 2z + 2 | `[1, 0, -2, 2]` |
 
 ⸻
 
