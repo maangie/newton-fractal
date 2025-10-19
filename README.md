@@ -82,7 +82,7 @@ RES = 900
 
 スクリーンショット例
 
-（ここに画像を追加予定）
+<img width="720" height="720" alt="Figure_1" src="https://github.com/user-attachments/assets/902142ff-97a7-46ff-a3ac-a6c3379d16cb" />
 
 ---
 
